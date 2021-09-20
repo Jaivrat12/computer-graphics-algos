@@ -1,0 +1,103 @@
+:root {
+    --pixel-size: 10px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    /* box-sizing: border-box; */
+}
+
+body {
+    font-family: sans-serif;
+}
+
+h1 {
+
+    margin: 2rem 0 2rem;
+    text-align: center;
+}
+
+.container {
+
+    max-width: min(720px);
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap-reverse;
+    /* flex-wrap: wrap; */
+}
+
+#controller {
+
+    padding: 0.5rem 0.4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #15da98;
+    font-size: 0.9rem;
+    background: #ddfdf2;
+    border-radius: 1rem;
+    border: solid 1px #00ffaa;
+}
+
+#controller > div {
+
+    margin: 0.25rem 0 0.25rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#drawing-tool {
+
+    margin-top: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#drawing-tool > div {
+    margin: 0.1rem 0 0.25rem;
+}
+
+input[type="number"] {
+    width: 2.5rem;
+}
+
+#graph {
+
+    position: relative;
+    margin: 1rem 0;
+    max-height: 98vw;
+    max-width: 98vw;
+    height: 300px;
+    width: 300px;
+    background-color: #ddfdf2;
+}
+
+.grid-lines {
+
+    position: absolute;
+    height: calc(100% + 1px);
+    width: calc(100% + 1px);
+    background-size: var(--pixel-size) var(--pixel-size);
+    /* background-image:
+        linear-gradient(to right, #00ffaa 1px, transparent 1px),
+        linear-gradient(to bottom, #00ffaa 1px, transparent 1px); */
+    background-image:
+        linear-gradient(to right, red 1px, transparent 1px),
+        linear-gradient(to bottom, red 1px, transparent 1px);
+}
+
+.pixel {
+
+    position: absolute;
+    /* top: 1px; */
+    bottom: 1px;
+    left: 1px;
+    height: calc(var(--pixel-size) - 1px);
+    width: calc(var(--pixel-size) - 1px);
+    background: #00ffc8;
+}

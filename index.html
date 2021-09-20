@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="./style.css">
+        <script defer src="./script.js"></script>
+
+        <title>Computer Graphics Algorithms</title>
+
+    </head>
+
+    <body>
+
+        <h1>Computer Graphics Algorithms</h1>
+
+        <div class="container">
+            <div id="graph">
+                <div class="grid-lines"></div>
+            </div>
+            <div id="controller">
+                <div>
+                    <label for="algo">Algo:&nbsp;</label>
+                    <select id="algo">
+                        <option value="dda-algo">Digital Differential Analyzer (DDA)</option>
+                        <option value="blg-algo">Bresenham’s Line Generation</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="pixel-size">Pixel Size:&nbsp;</label>
+                    <input type="number" id="pixel-size" value="10">
+                    <span id="range" style="margin-left: 0.5rem;">
+                        Value Range: <span id="range-min">1</span> to
+                        <span id="range-max">30</span>
+                    </span>
+                </div>
+                <form id="drawing-tool">
+                    <div>
+                        <label for="x1">x<sub>1</sub>:</label>
+                        <input type="number" id="x1" min="1">
+                        <label for="y1">y<sub>1</sub>:</label>
+                        <input type="number" id="y1" min="1">
+                        <label for="x2">x<sub>2</sub>:</label>
+                        <input type="number" id="x2" min="1">
+                        <label for="y2">y<sub>2</sub>:</label>
+                        <input type="number" id="y2" min="1">
+                    </div>
+                    <div>
+                        <input type="submit" value="Draw">
+                        <input type="button" id="clear" value="Clear Canvas">
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </body>
+
+</html>
