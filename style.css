@@ -1,11 +1,14 @@
 :root {
+
     --pixel-size: 10px;
+    --grap-color: #cdffee;
+    --grid-color: #00917136;
+    --pixel-color: #388675;
 }
 
 * {
     margin: 0;
     padding: 0;
-    /* box-sizing: border-box; */
 }
 
 body {
@@ -20,13 +23,12 @@ h1 {
 
 .container {
 
-    max-width: min(720px);
+    max-width: 720px;
     margin: auto;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
     flex-wrap: wrap-reverse;
-    /* flex-wrap: wrap; */
 }
 
 #controller {
@@ -74,7 +76,7 @@ input[type="number"] {
     max-width: 98vw;
     height: 300px;
     width: 300px;
-    background-color: #ddfdf2;
+    background-color: var(--grap-color);
 }
 
 .grid-lines {
@@ -83,21 +85,15 @@ input[type="number"] {
     height: calc(100% + 1px);
     width: calc(100% + 1px);
     background-size: var(--pixel-size) var(--pixel-size);
-    /* background-image:
-        linear-gradient(to right, #00ffaa 1px, transparent 1px),
-        linear-gradient(to bottom, #00ffaa 1px, transparent 1px); */
     background-image:
-        linear-gradient(to right, red 1px, transparent 1px),
-        linear-gradient(to bottom, red 1px, transparent 1px);
+        linear-gradient(to right, var(--grid-color) 1px, transparent 1px),
+        linear-gradient(to bottom, var(--grid-color) 1px, transparent 1px);
 }
 
 .pixel {
 
     position: absolute;
-    /* top: 1px; */
-    bottom: 1px;
-    left: 1px;
     height: calc(var(--pixel-size) - 1px);
     width: calc(var(--pixel-size) - 1px);
-    background: #00ffc8;
+    background: var(--pixel-color);
 }
